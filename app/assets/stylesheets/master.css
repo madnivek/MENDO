@@ -1,0 +1,70 @@
+/*RESET*/
+
+body, div, nav, li, ul, h2 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  background: transparent;
+  list-style: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 3000px;
+}
+
+/*HEADER*/
+
+.nav-bar, .nav-bar ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.header {
+  position: fixed;
+  background: white;
+  width: 100%;
+  top: 0;
+  height: 70px;
+}
+
+.nav-bar {
+  position: fixed;
+  background: white;
+  width: 95%;
+  height: 45px;
+  margin: 0 -47.5%;
+  padding: 10px 0px;
+  top: 0;
+  left: 50%;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+.nav-bar li {
+  padding: 0px 10px;
+}
+
+.logo {
+  position: fixed;
+  width: 100px;
+  font-size: 28px;
+  padding-top: 20px;
+  top: 0;
+  left: calc(50% - 50px);
+}
+
+/*HOMEPAGE*/
+
+.homepage {
+  margin-top: 70px;
+}
+
+.banner {
+  background:black;
+  height: 400px;
+}
