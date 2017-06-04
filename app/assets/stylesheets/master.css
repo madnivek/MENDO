@@ -16,7 +16,7 @@ body {
 
 /*HEADER*/
 
-.nav-bar, .nav-bar ul{
+.nav-bar, .nav-bar > ul{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,6 +58,49 @@ body {
   left: calc(50% - 50px);
 }
 
+/*MODAL*/
+
+.info-section{
+  position: fixed;
+  width: 500px;
+  height: 570px;
+  right:2.5%;
+  top:75px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.info-section h2 {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-size: 32px;
+}
+
+.About{
+  background: #98B9CC;
+}
+
+.Support{
+  background: #A79EB7;
+}
+
+.info-section-links {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+}
+
+.info-section-links:hover {
+  cursor: pointer;
+}
+
+.contact-visit-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 60px 0px 60px;
+}
+
 /*HOMEPAGE*/
 
 .homepage {
@@ -66,5 +109,5 @@ body {
 
 .banner {
   background:black;
-  height: 400px;
+  height: 370px;
 }
