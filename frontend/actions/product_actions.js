@@ -4,6 +4,7 @@ export const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 export const receiveProducts = products => {
+  debugger
   return {
     type: RECEIVE_PRODUCTS,
     products

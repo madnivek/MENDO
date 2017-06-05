@@ -59,7 +59,9 @@ class Header extends React.Component{
       <CSSTransitionGroup
         transitionName="info-modal"
         transitionAppear={true}
-        transitionAppearTimeout={300}>
+        transitionAppearTimeout={300}
+        transitionEnter={false}
+        transitionLeave={false}>
         <section className={`info-section ${type}`}>
           <h2> { type }</h2>
           <ul className="info-section-links">
