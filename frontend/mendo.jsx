@@ -6,6 +6,5 @@ import { fetchProducts } from './util/products_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore();
-  window.fetchProducts = fetchProducts;
   ReactDOM.render(<Root store={store}/>, document.getElementById('mendo'));
 });

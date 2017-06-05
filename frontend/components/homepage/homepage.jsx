@@ -3,7 +3,6 @@ import Banner from '../banner/banner';
 
 class Homepage extends React.Component {
   constructor(props){
-    debugger
     super(props);
   }
 

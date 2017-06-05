@@ -1,18 +1,28 @@
 import React from 'react';
 
-const Banner = () => {
-  return(
-    <div className="banner">
-      <ul>
-        <li>
-        </li>
-        <li>
-        </li>
-        <li>
-        </li>
-      </ul>
-    </div>
-  );
+class Banner extends React.Component{
+  constructor(props){
+    super(props);
+  }
+
+  componentDidMount(){
+
+  }
+
+  render(){
+    return(
+      <div className="banner">
+        <ul>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+        </ul>
+      </div>
+    );
+  }
 };
 
 export default Banner;

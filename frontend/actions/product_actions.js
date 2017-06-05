@@ -10,7 +10,6 @@ const parseProducts = products => {
       title: product.title.rendered
     };
   });
-  debugger
   return productObj;
 };
 
