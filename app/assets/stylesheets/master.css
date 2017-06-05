@@ -68,6 +68,7 @@ body {
   top:75px;
   text-align: center;
   font-weight: normal;
+  overflow: hidden;
 }
 
 .info-section h2 {
@@ -99,6 +100,15 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 30px 60px 0px 60px;
+}
+
+.info-modal-appear {
+  height: 0px;
+}
+
+.info-modal-appear.info-modal-appear-active {
+  height: 570px;
+  transition: height 0.3s ease-in;
 }
 
 /*HOMEPAGE*/

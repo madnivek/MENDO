@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../banner/banner';
 import Modal from 'react-modal';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 const modalLinks = {
   Support: [
@@ -55,20 +56,26 @@ class Header extends React.Component{
     });
 
     return(
-      <section className={`info-section ${type}`}>
-        <h2> { type }</h2>
-        <ul className="info-section-links">
-          { linkTexts }
-        </ul>
-        <div className="contact-visit-section">
-          {contactText}
-          {visitUsText}
-        </div>
-      </section>
+      <CSSTransitionGroup
+        transitionName="info-modal"
+        transitionAppear={true}
+        transitionAppearTimeout={300}>
+        <section className={`info-section ${type}`}>
+          <h2> { type }</h2>
+          <ul className="info-section-links">
+            { linkTexts }
+          </ul>
+          <div className="contact-visit-section">
+            {contactText}
+            {visitUsText}
+          </div>
+        </section>
+      </CSSTransitionGroup>
     );
   }
 
   render(){
+    const modal = this.renderModal(this.state.type);
     return (
       <div>
         <div onMouseLeave={ () => this.setModalType() } className="header">
@@ -81,8 +88,8 @@ class Header extends React.Component{
               <li onMouseEnter={ () => this.setModalType("About")}>ABOUT</li>
               <li onMouseEnter={ () => this.setModalType("Support")}>SUPPORT</li>
             </ul>
-            { this.renderModal(this.state.type) }
           </nav>
+          { modal }
           <h2 className="logo">KENDO</h2>
         </div>
         { this.props.children }
