@@ -65,7 +65,7 @@ body {
   position: fixed;
   width: 100px;
   font-size: 28px;
-  padding-top: 20px;
+  padding-top: 35px;
   top: 0;
   left: calc(50% - 50px);
 }
@@ -337,4 +337,25 @@ body {
 
 .blue {
   background: #96B4BC;
+}
+
+/*HEADER TRANSITION*/
+
+.header-transition-appear {
+  opacity: 0.01;
+}
+
+.header-transition-appear.header-transition-appear-active {
+  opacity: 1;
+  transition: opacity 0.4s ease-in;
+}
+
+/*PAGE TRANSITION*/
+.page-transition-appear {
+  transform: translate(100%,0);
+}
+
+.page-transition-appear.page-transition-appear-active {
+  transform: translate(0,0);
+  transition: transform 0.4s ease-in;
 }

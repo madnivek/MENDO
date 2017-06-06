@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../banner/banner';
 import Modal from 'react-modal';
 import { CSSTransitionGroup } from 'react-transition-group';
+import { hashHistory } from 'react-router';
 
 const modalLinks = {
   Support: [
@@ -79,23 +80,30 @@ class Header extends React.Component{
   render(){
     const modal = this.renderModal(this.state.type);
     return (
-      <div>
-        <div onMouseLeave={ () => this.setModalType() } className="header">
-          <nav className="nav-bar">
-            <ul>
-              <li>HOME</li>
-              <li>BOOKS</li>
-            </ul>
-            <ul>
-              <li onMouseEnter={ () => this.setModalType("About")}>ABOUT</li>
-              <li onMouseEnter={ () => this.setModalType("Support")}>SUPPORT</li>
-            </ul>
-          </nav>
-          { modal }
-          <h2 className="logo">MENDO</h2>
+      <CSSTransitionGroup
+        transitionName="header-transition"
+        transitionAppear={true}
+        transitionAppearTimeout={500}
+        transitionEnter={false}
+        transitionLeave={false}>
+        <div>
+          <div onMouseLeave={ () => this.setModalType() } className="header">
+            <nav className="nav-bar">
+              <ul>
+                <li onClick={ () => hashHistory.push('/homepage')}>HOME</li>
+                <li onClick={ () => hashHistory.push('/books')}>BOOKS</li>
+              </ul>
+              <ul>
+                <li onMouseEnter={ () => this.setModalType("About")}>ABOUT</li>
+                <li onMouseEnter={ () => this.setModalType("Support")}>SUPPORT</li>
+              </ul>
+            </nav>
+            { modal }
+            <h2 className="logo">MENDO</h2>
+          </div>
+          { this.props.children }
         </div>
-        { this.props.children }
-      </div>
+      </CSSTransitionGroup>
     );
   }
 }

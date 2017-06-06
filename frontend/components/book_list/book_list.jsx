@@ -1,6 +1,6 @@
 import React from 'react';
 import InfoSection from '../info-section';
-
+import {CSSTransitionGroup} from 'react-transition-group';
 class BookList extends React.Component {
   constructor(props){
     super(props);
@@ -27,10 +27,17 @@ class BookList extends React.Component {
     });
 
     return(
-      <div className="book-list">
-        <h1>What's New</h1>
-        { products }
-      </div>
+      <CSSTransitionGroup
+        transitionName="page-transition"
+        transitionAppear={true}
+        transitionAppearTimeout={500}
+        transitionEnter={false}
+        transitionLeave={false}>
+        <div className="book-list">
+          <h1>What's New</h1>
+          { products }
+        </div>
+      </CSSTransitionGroup>
     );
   }
 }
