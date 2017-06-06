@@ -4,6 +4,7 @@ import {CSSTransitionGroup} from 'react-transition-group';
 class BookList extends React.Component {
   constructor(props){
     super(props);
+    this.headline = this.props.path === "homepage" ? "Featured" : "Books";
   }
 
   componentDidMount(){
@@ -19,7 +20,7 @@ class BookList extends React.Component {
           <img src={product.img_url}/>
           <InfoSection
             title={product.title}
-            headline="Featured"
+            headline={this.headline}
             description={product.description}
             />
         </div>
@@ -33,8 +34,7 @@ class BookList extends React.Component {
         transitionAppearTimeout={500}
         transitionEnter={false}
         transitionLeave={false}>
-        <div className="book-list">
-          <h1>What's New</h1>
+        <div className={`book-list ${this.props.listType}`}>
           { products }
         </div>
       </CSSTransitionGroup>

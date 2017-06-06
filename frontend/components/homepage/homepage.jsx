@@ -9,7 +9,7 @@ class Homepage extends React.Component {
     super(props);
   }
 
-  render(){      
+  render(){
     return(
       <CSSTransitionGroup
         transitionName="page-transition"
@@ -20,6 +20,7 @@ class Homepage extends React.Component {
         <div className="homepage">
           <BannerContainer/>
           <ShowcaseContainer productId="11"/>
+          <h1 className="whats-new">What's New</h1>
           <BookListContainer limit="4"/>
         </div>
       </CSSTransitionGroup>

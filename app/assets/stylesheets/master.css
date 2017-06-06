@@ -152,22 +152,28 @@ body {
   width:30%;
   height: 100%;
   overflow: hidden;
+  margin-top: 2.5%;
+}
+
+.banner ul li:hover {
+  cursor: pointer;
 }
 
 .banner li img {
-  height: 100%;
-  width: 100%;
+  height: 25vw;
+  width: 35vw;
 }
 
 .item-text {
   position: absolute;
-  text-align: center;
-  width: 100%;
+  text-align: left;
+  width: calc(100% - 4vw);
   color: white;
   bottom: 0px;
-  font-size: 1.5vw;
+  font-size: 2.0vw;
   font-weight: bold;
   transition: transform 0.15s ease-in-out;
+  padding: 0 2vw;
 }
 
 .banner li:hover .item-text{
@@ -258,11 +264,20 @@ body {
   text-align: center;
 }
 
+.book-list.all {
+  margin-top: 120px;
+}
+
 .book-list h1{
   font-size: 4vw;
 }
 
-.book-list > h1:before, .book-list > h1:after{
+.whats-new {
+  padding: 15px 0px;
+  text-align: center;
+}
+
+.whats-new:before, .whats-new:after{
   font-size: 2vw;
   content: '';
   width: 30vw;
@@ -274,11 +289,11 @@ body {
   top: -1px;
 }
 
-.book-list > h1:before{
+.whats-new:before{
   margin-right: 3.75vw;
 }
 
-.book-list > h1:after{
+.whats-new:after{
   margin-left: 3.75vw;
 }
 
@@ -337,6 +352,21 @@ body {
 
 .blue {
   background: #96B4BC;
+}
+
+.banner-yellow {
+  background: #919383;
+  transition: background-color 0.5s;
+}
+
+.banner-pink {
+  background-color: #a59391;
+  transition: background-color 0.5s;
+}
+
+.banner-black {
+  background: black;
+  transition: background-color 0.5s;
 }
 
 /*HEADER TRANSITION*/

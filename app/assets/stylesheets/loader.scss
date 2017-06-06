@@ -10,7 +10,7 @@ $delay : $duration/6;
 }
 
 .bookshelf_wrapper {
-  position: relative;
+  position: fixed;
   top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);

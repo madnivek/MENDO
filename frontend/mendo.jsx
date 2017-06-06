@@ -28,5 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore();
   setTimeout( () => {
     ReactDOM.render(<Root store={store}/>, document.getElementById('mendo'));
-  }, 3000);
+  }, 2000);
 });
