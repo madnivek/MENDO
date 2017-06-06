@@ -92,7 +92,7 @@ class Header extends React.Component{
             </ul>
           </nav>
           { modal }
-          <h2 className="logo">KENDO</h2>
+          <h2 className="logo">MENDO</h2>
         </div>
         { this.props.children }
       </div>

@@ -10,9 +10,9 @@ class Banner extends React.Component{
   }
 
   render(){
-    const bannerImages = this.props.items.map( item => {
+    const bannerImages = this.props.items.map( (item, index) => {
       return(
-        <li key={item.title}>
+        <li className={`banner${index+1}`}key={item.title}>
           <img src={item.img_url}/>
           <p className="item-text">{item.title}</p>
         </li>

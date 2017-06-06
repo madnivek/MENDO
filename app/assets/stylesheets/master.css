@@ -30,7 +30,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -39,7 +39,7 @@ body {
   background: white;
   width: 100%;
   top: 0;
-  height: 70px;
+  height: 100px;
   z-index: 1;
 }
 
@@ -47,7 +47,7 @@ body {
   position: fixed;
   background: white;
   width: 95%;
-  height: 45px;
+  height: 75px;
   margin: 0 -47.5%;
   padding: 10px 0px;
   top: 0;
@@ -58,6 +58,7 @@ body {
 
 .nav-bar li {
   padding: 0px 10px;
+  cursor: pointer;
 }
 
 .logo {
@@ -76,10 +77,11 @@ body {
   width: 500px;
   height: 570px;
   right:2.5%;
-  top:75px;
+  top:105px;
   text-align: center;
   font-weight: normal;
   overflow: hidden;
+  box-shadow: 0px 0px 10px black;
 }
 
 .info-section h2 {
@@ -129,6 +131,8 @@ body {
   height: 100%;
 }
 
+
+
 .banner {
   width: 95%;
   padding: 2.5% 2.5%;
@@ -163,7 +167,6 @@ body {
   bottom: 0px;
   font-size: 1.5vw;
   font-weight: bold;
-  /*text-shadow: 1px 1px 1px black;*/
   transition: transform 0.15s ease-in-out;
 }
 
@@ -177,25 +180,24 @@ body {
 .showcase {
   margin-top: 5%;
   display: flex;
-  height: 100%;
   width: 100%;
 }
 
 .sc-description {
   position: relative;
   width:35%;
+  padding: 0 2.5%;
 }
 
-.sc-description h1, .sc-description h4 {
+.content-section h1, .content-section h4 {
   font-size: 4vw;
-  padding: 0px 40px;
 }
 
-.sc-description h4 {
+.content-section h4 {
   font-size: 2vw;
 }
 
-.sc-description h4:before {
+.headline:before {
   font-size: 2vw;
   content: '';
   width: 7vw;
@@ -208,15 +210,13 @@ body {
   top: -1px;
 }
 
-.sc-description p {
-  padding:0px 40px;
+.content-section p {
   font-size: 1.75vw;
 }
 
 .sc-image {
   position: relative;
   width:65%;
-  background: #E1C9C5;
 }
 
 .sc-image img{
@@ -226,16 +226,18 @@ body {
 
 .showcase span {
   position:absolute;
-  width:140px;
-  top: 85%;
+  width:15vw;
+  bottom: 20%;
   text-align:center;
-  font-size: 20px;
-  padding: 15px 0px;
+  font-size: 2.5vw;
+  padding: 1.4vw 0px;
   font-weight: bold;
+  transition: transform 0.25s;
 }
 
 .showcase span:hover {
   cursor: pointer;
+  transform: translate(0px, 20px)
 }
 
 .sc-description span{
@@ -247,4 +249,92 @@ body {
 .sc-image span{
   background: white;
   left:0px;
+}
+
+/*BOOKLIST*/
+.book-list {
+  width:100%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.book-list h1{
+  font-size: 4vw;
+}
+
+.book-list > h1:before, .book-list > h1:after{
+  font-size: 2vw;
+  content: '';
+  width: 30vw;
+  height: 4px;
+  display: inline-block;
+  position: relative;
+  background: grey;
+  vertical-align: middle;
+  top: -1px;
+}
+
+.book-list > h1:before{
+  margin-right: 3.75vw;
+}
+
+.book-list > h1:after{
+  margin-left: 3.75vw;
+}
+
+.product-container {
+  display: inline-grid;
+  text-align: left;
+  background: grey;
+  width: 40%;
+  margin: 15px;
+  padding: 30px;
+  transition: transform 0.5s;
+}
+
+.product-container:hover{
+  z-index:100;
+  transform: scale(1.05);
+  /*transition: width 0.2s ease-in;*/
+  box-shadow: 5px 5px 5px darkgrey;
+  cursor: pointer;
+}
+
+.book-list img {
+  position: relative;
+  left: calc(50% - 7.5vw);
+  height: 20vw;
+  width: 15vw;
+  box-shadow: 5px 5px 5px darkgrey;
+}
+
+.product-container h1 {
+  font-size: 2.5vw;
+}
+
+.product-container h4 {
+  font-size: 1.5vw;
+}
+
+.product-container p {
+  height: 5vw;
+  text-overflow: ellipsis;
+}
+
+/*COLORS*/
+
+.yellow {
+  background: #CFD2BD;
+}
+
+.pink {
+  background: #E1C9C7;
+}
+
+.purple {
+  background: #A79EB7;
+}
+
+.blue {
+  background: #96B4BC;
 }
