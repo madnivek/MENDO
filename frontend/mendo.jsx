@@ -20,9 +20,6 @@ const Loader = () => {
   );
 };
 
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Loader/>, document.getElementById('mendo'));
   const store = configureStore();
