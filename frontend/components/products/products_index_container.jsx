@@ -1,11 +1,11 @@
-import { connect } from 'react-redux';
+import React from 'react';
 import ProductsIndex from './products_index';
+import { connect } from 'react-redux';
 import { fetchProducts } from '../../actions/product_actions';
 
-const mapStateToProps = ({ products, errors }) => {
+const mapStateToProps = ({ product_slice }) => {
   return {
-    products,
-    errors
+    products: Object.values(product_slice.products)
   };
 };
 

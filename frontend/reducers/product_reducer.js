@@ -9,22 +9,22 @@ const _defaultState = {
   errors: []
 };
 
-const ProductReducer = (oldstate = _defaultState, action) => {
+const ProductReducer = (oldState = _defaultState, action) => {
   switch(action.type){
     case RECEIVE_PRODUCTS: {
-      const newState = merge({}, oldstate);
+      const newState = merge({}, oldState);
       newState.products = action.products;
       return newState;
     }
 
     case RECEIVE_ERRORS: {
-      const newState = merge({}, oldstate);
+      const newState = merge({}, oldState);
       newState.errors = action.errors;
       return newState;
     }
 
     default: {
-      return _defaultState;
+      return oldState;
     }
   }
 };

@@ -9,22 +9,22 @@ const _defaultState = {
   errors: []
 };
 
-const BannerReducer = (oldstate = _defaultState, action) => {
+const BannerReducer = (oldState = _defaultState, action) => {
   switch(action.type){
     case RECEIVE_ITEMS: {
-      const newState = merge({}, oldstate);
+      const newState = merge({}, oldState);
       newState.items = action.items;
       return newState;
     }
 
     case RECEIVE_ERRORS: {
-      const newState = merge({}, oldstate);
+      const newState = merge({}, oldState);
       newState.errors = action.errors;
       return newState;
     }
 
     default: {
-      return _defaultState;
+      return oldState;
     }
   }
 };

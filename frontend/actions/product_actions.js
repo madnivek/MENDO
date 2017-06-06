@@ -7,7 +7,9 @@ const parseProducts = products => {
   const productObj = {};
   products.forEach( product => {
     productObj[product.id] = {
-      title: product.title.rendered
+      title: product.title.rendered,
+      img_url: product.better_featured_image.source_url,
+      description: product.content.rendered
     };
   });
   return productObj;

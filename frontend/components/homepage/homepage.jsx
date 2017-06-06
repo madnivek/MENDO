@@ -1,5 +1,6 @@
 import React from 'react';
-import Banner from '../banner/banner';
+import BannerContainer from '../banner/banner_container';
+import ShowcaseContainer from '../showcase/showcase_container';
 
 class Homepage extends React.Component {
   constructor(props){
@@ -9,7 +10,8 @@ class Homepage extends React.Component {
   render(){
     return(
       <div className="homepage">
-        <Banner/>
+        <BannerContainer/>
+        <ShowcaseContainer productId="11"/>
       </div>
     );
   }

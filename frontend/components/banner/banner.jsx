@@ -6,19 +6,23 @@ class Banner extends React.Component{
   }
 
   componentDidMount(){
-
+    this.props.fetchItems();
   }
 
   render(){
+    const bannerImages = this.props.items.map( item => {
+      return(
+        <li key={item.title}>
+          <img src={item.img_url}/>
+          <p className="item-text">{item.title}</p>
+        </li>
+      );
+    });
+
     return(
       <div className="banner">
         <ul>
-          <li>
-          </li>
-          <li>
-          </li>
-          <li>
-          </li>
+          { bannerImages }
         </ul>
       </div>
     );
