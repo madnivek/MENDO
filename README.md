@@ -1,4 +1,7 @@
 # MENDO
+
+[Link to Live Page](http://www.kevin-dam.co/MENDO)
+
 Mendo is a proof of concept single-page web application based on the original website (www.mendo.nl) and is used for for demonstration purposes only.
 Mendo was built using headless Wordpress as a back end CMS. The front end utilizes React/Redux, HTML, and CSS.
 
