@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import { fetchProducts } from './util/products_api_util';
+import { fetchItems } from './actions/banner_actions';
+import { fetchProducts } from './actions/product_actions';
 
 const Loader = () => {
   return(
@@ -23,7 +24,8 @@ const Loader = () => {
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Loader/>, document.getElementById('mendo'));
   const store = configureStore();
-  setTimeout( () => {
-    ReactDOM.render(<Root store={store}/>, document.getElementById('mendo'));
-  }, 2000);
+
+  fetchProducts()(store.dispatch).then(
+    () => fetchItems()(store.dispatch).then(
+      () => ReactDOM.render(<Root store={store}/>, document.getElementById('mendo'))));
 });

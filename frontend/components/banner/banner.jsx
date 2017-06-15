@@ -1,4 +1,5 @@
 import React from 'react';
+import Loader from '../loader/loader';
 
 class Banner extends React.Component{
   constructor(props){
