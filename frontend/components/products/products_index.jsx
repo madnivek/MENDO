@@ -11,7 +11,7 @@ class ProductsIndex extends React.Component{
 
   render(){
     return(
-      <div>HELLO</div>
+      <div>TO BE IMPLEMENTED</div>
     );
   }
 }
