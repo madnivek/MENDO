@@ -2,11 +2,13 @@
 
 [Link to Live Page](http://www.kevin-dam.co/MENDO)
 
-NOTE:The free wordpress hoster this uses is experiencing a lot of down-time and has yet to be migrated to a new hoster. Please be patient and let the page load for a couple minutes.
+NOTE:The free wordpress hoster this uses is experiencing a lot of down-time and has yet to be migrated to a new hoster. Please be patient as the page loads.
 
-Mendo is a proof of concept single-page web application based on the original website (www.mendo.nl) and is used for for demonstration purposes only.Mendo was built using a headless Wordpress as a back end content management system (CMS). The front end utilizes React/Redux, HTML, and CSS to render the Wordpress content.
+Mendo is a proof of concept single-page web application based on the original website (www.mendo.nl) and is used for for demonstration purposes only.Current working features include the rendering of CMS assets (book products and banner elements) to a React/Redux frontend.
 
 ## Design/Implementation
+
+Mendo was built using a headless Wordpress as a back end content management system (CMS). The front end utilizes React/Redux, HTML, and CSS to render the Wordpress content.
 
 ### Wordpress REST-API
 
