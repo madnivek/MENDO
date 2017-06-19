@@ -1,6 +1,6 @@
 # MENDO (in-progress)
 
-UPDATE:The free wordpress hoster this uses is experiencing a lot of down-time and has yet to be migrated to a new hoster. Please be patient as the page loads.
+UPDATE:The free wordpress hoster this uses is experiencing a lot of down-time and has yet to be migrated to a new hoster. Therefore, the API responses are significantly delayed. Please be patient as the page loads.
 
 Mendo is a proof of concept single-page web application based on the original website (www.mendo.nl) and is used for for demonstration purposes only. Current working features include the rendering of CMS assets (book products and banner elements) to a React/Redux frontend.
 
